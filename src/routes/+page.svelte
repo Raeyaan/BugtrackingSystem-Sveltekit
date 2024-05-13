@@ -1,2 +1,2 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Welcome to the Bug Tracking System</h1>
+<p>Manage your software projects, track issues, and collaborate effectively.</p>
