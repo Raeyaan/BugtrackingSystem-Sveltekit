@@ -1,38 +1,16 @@
-# create-svelte
+# Full-Stack Agenda Web Application using SvelteKit and MongoDB
+This is a full-stack web application that allows users to manage their to-do lists efficiently. The application is built using the SvelteKit framework on the front end and MongoDB on the back end to store and manage task data. The purpose of this project was to learn more about SvelteKit and to gain experience in building a full stack web application.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# Features
+* User Authentication: Users can sign up and log in to access their personalized to-do lists securely. Also utilize JWT tokens and cookies for seamless authentication, and route protection.
+* Create Tasks: Users can add new tasks with due dates and priorities.
+* Update Tasks: Tasks can be edited or marked as completed as needed.
+* Delete Tasks: Completed or unnecessary tasks can be removed from the list.
+* Filter and Sorting: Users can filter and sort their tasks based on completion status.
+* Responsive Design: The application is fully responsive, ensuring a seamless experience across various devices.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+# Tech Stack
+* Front-end: SvelteKit (JavaScript framework for building web applications) and TypeScript
+* Back-end: SvelteKit form actions (for handling API requests) and MongoDB (database for storing task data)
+* Styling: CSS
+* Hosting: The application can be deployed on platforms like Vercel, Netlify, or your preferred hosting service (I'm using Netlify).
