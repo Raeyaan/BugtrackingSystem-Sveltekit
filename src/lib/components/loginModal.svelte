@@ -20,7 +20,7 @@
 <div class="loginModal">
 	<div class="inputContainer">
 		{#if isLogin}
-			<h1>Unprocrastinator</h1>
+			<h1>Software Development Management</h1>
 			<form method="POST" action="?/login">
 				<div class="labelInputContainer">
 					<label for="username">Username:</label>
@@ -31,7 +31,7 @@
 					<input type="password" name="password" />
 				</div>
 				<div class="loginButtonContainer">
-					<button>Login</button>
+					<button class="btn">Login</button>
 				</div>
 			</form>
 		{:else}
@@ -46,7 +46,7 @@
 					<input type="password" name="password" />
 				</div>
 				<div class="loginButtonContainer">
-					<button>Create Account</button>
+					<button class="btn">Create Account</button>
 				</div>
 			</form>
 			<div
@@ -108,16 +108,6 @@
 		background-color: rgb(255, 255, 255);
 	}
 
-	button {
-		background: none;
-		border: none;
-		cursor: pointer;
-	}
-
-	button:hover {
-		color: #4c5152;
-		text-decoration: underline;
-	}
 
 	.loginButtonContainer {
 		text-align: center;

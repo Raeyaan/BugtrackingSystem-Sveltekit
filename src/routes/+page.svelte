@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import AnimatedAgendas from '$lib/components/animatedAgendas.svelte';
 	import LoginModal from '$lib/components/loginModal.svelte';
 	import agendaList from '$lib/mockData/displayAgendas.json';
 	import Swal from 'sweetalert2';

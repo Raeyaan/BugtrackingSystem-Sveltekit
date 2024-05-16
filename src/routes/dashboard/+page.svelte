@@ -107,10 +107,20 @@
 		if (event && $filterOption) {
 			const oldFilterEl = document.getElementById($filterOption)!;
 			oldFilterEl.classList.remove('selectedFilterOption');
+			oldFilterEl.style.backgroundImage = 'linear-gradient(to right, #60A3D9, #ebf2fa)';
+			oldFilterEl.style.backgroundImage ='linear-gradient(to top,  #60A3D9, #ebf2fa)';
+			oldFilterEl.style.backgroundImage ='linear-gradient(to top,  #60A3D9, #ebf2fa)';
+			oldFilterEl.style.backgroundImage ='linear-gradient(to top,  #60A3D9, #ebf2fa)';
+
 			$filterOption = event.id;
 			event.classList.add('selectedFilterOption');
-		}
+			event.style.backgroundImage = 'linear-gradient(to right, #ebf2fa, #ebf2fa)';
+			event.style.backgroundImage ='linear-gradient(to top,  #ebf2fa, #ebf2fa)';
+			event.style.backgroundImage ='linear-gradient(to top,  #ebf2fa, #ebf2fa)';
+			event.style.backgroundImage ='linear-gradient(to top,  #ebf2fa, #ebf2fa)';
+		
 	};
+}
 </script>
 
 <div class="mainContainer">
@@ -118,13 +128,13 @@
 		<div class="githubLinkContainer">
 			<div class="github">
 				<a
-					href="https://github.com/Jasonsd19/SvelteKit-full-stack-agenda-list"
+					href="https://github.com/Raeyaan/BugtrackingSystem-Sveltekit"
 					target="_blank"
 					rel="noreferrer noopener">GitHub Code</a
 				>
 			</div>
 		</div>
-		<div class="title">Unprocrastinator</div>
+		<div class="title">Software Development Management</div>
 		<div class="logoutButtonContainer">
 			<div
 				class="logout btn"
@@ -208,6 +218,7 @@
 							<div style={`text-align: right; ${updateInput.length > 50 ? 'color: red' : ''}`}>
 								{`${updateInput.length} / 50`}
 							</div>
+							<label for="tag">Tag:</label>
 							<select name="tag" value={updateInputTag} on:change={handleUpdateTagUpdate}>
 								<option value="">Select Tag</option>
 								<option value="bug">Bug</option>
@@ -319,18 +330,6 @@
 		justify-content: center;
 	}
 
-	/* button {
-		font-size: 16px;
-		background: none;
-		border: none;
-		cursor: pointer;
-	}
-
-	button:hover {
-		color: #4c5152;
-		text-decoration: underline;
-	} */
-
 	.mainContainer {
 		display: flex;
 		flex-direction: column;
@@ -338,7 +337,7 @@
 		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: hidden;
-		background-color: rgb(255, 255, 255);
+		background-color: #f0f0f0; /* Light gray background */
 	}
 
 	.header {
@@ -346,8 +345,8 @@
 		justify-content: space-between;
 		width: 100vw;
 		min-height: 7vh;
-		border-bottom: 1px solid black;
-		background-color: rgb(231, 228, 228);
+		border-bottom: 1px solid #333; /* Dark gray border */
+		background-color: #0b3954; /* Dark blue header */
 	}
 
 	.githubLinkContainer {
@@ -357,6 +356,7 @@
 		align-content: center;
 		padding-left: 5vw;
 		font-size: 17.5px;
+		color: #ecf0f1; /* Light gray text color */
 	}
 
 	.github {
@@ -369,11 +369,11 @@
 
 	.github a {
 		text-decoration: none;
-		color: #000000;
+		color: #ecf0f1; /* Light gray text color */
 	}
 
 	.github a:hover {
-		color: rgb(90, 109, 211);
+		color: #e67e22; /* Orange hover color */
 		text-decoration: underline;
 	}
 
@@ -385,6 +385,7 @@
 		text-align: center;
 		align-content: center;
 		font-size: 30px;
+		color: #ecf0f1; /* Light gray text color */
 	}
 
 	.logoutButtonContainer {
@@ -392,7 +393,9 @@
 		width: 33%;
 		justify-content: right;
 		padding-right: 5vw;
+		padding-top: 0.6em;
 		font-size: 17.5px;
+		color: #ecf0f1; /* Light gray text color */
 	}
 
 	.logout {
@@ -404,7 +407,7 @@
 	}
 
 	.logout:hover {
-		color: rgb(90, 109, 211);
+		color: #e67e22; /* Orange hover color */
 		text-decoration: underline;
 	}
 
@@ -412,6 +415,11 @@
 		display: flex;
 		flex-direction: row;
 		height: 100vh;
+		border-top: none;
+  border-right: 0;
+  border-bottom: 0px;
+  border-left: 0px;
+	
 	}
 
 	.createModifyContainer {
@@ -419,14 +427,27 @@
 		width: 25%;
 		flex-direction: column;
 		overflow-y: visible;
+		padding-left: 5px;
+		padding-right: 5px;
+		justify-content: space-evenly;
+		background:linear-gradient(to right, #bfd7ea, #60A3D9); 
+		border-top: none;
+  border-right: 0;
+  border-bottom: 0px;
+  border-left: 0px;
+		
+
 	}
 
 	.createAgendaContainer {
 		display: flex;
 		width: 100%;
-		height: 50%;
 		flex-direction: column;
 		justify-content: center;
+		background-color: #bdc3c7;
+		box-sizing: border-box;
+		border-radius: 10px;
+
 	}
 
 	.createFormHeader {
@@ -434,55 +455,75 @@
 		text-align: center;
 		padding-top: 1vh;
 		font-size: 18px;
-		background-color: rgb(231, 228, 228);
+		background-color: #0b3954; /* Dark blue header */
+		color: #ecf0f1; /* Light gray text color */
+		border-radius: 10px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+
 	}
 
 	.createForm {
 		display: flex;
 		flex-direction: column;
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+
 		padding-left: 3vw;
 		padding-right: 3vw;
-		background-color: #e7e4e4;
+		background-color: #ebf2fa; /* Light gray form background */
 	}
 
 	.createForm input {
 		border: none;
-		border: solid 1px #000000;
+		border: solid 1px #333; /* Dark gray border */
 		border-radius: 5px;
 	}
 
 	.createForm textarea {
 		border: none;
-		border: solid 1px #000000;
+		border: solid 1px #333; /* Dark gray border */
 		border-radius: 5px;
 	}
 
 	.createForm label {
 		text-align: left;
+		color: #333; /* Dark gray text color */
 	}
 
 	.descriptionInput {
 		width: 100%;
-		height: 20vh;
 		resize: none;
 	}
 
 	.createButtonContainer {
 		display: flex;
 		justify-content: space-evenly;
+		margin-bottom: 5%;
+		
+	}
+	.createButtonContainer  :hover{
+		background-color: #ff6663;
+
 	}
 
 	.modifyDeleteAgendaContainer {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		background-color: #bdc3c7;
+		border-radius: 10px;
+		box-sizing:border-box;
+
+		
 	}
 
 	.modifyContainer {
 		display: flex;
-		height: 50%;
 		flex-direction: column;
 		align-content: center;
+		
 	}
 
 	.hiddenFormContainer {
@@ -494,7 +535,7 @@
 		align-content: center;
 		justify-content: center;
 		text-align: center;
-		color: red;
+		color: #e74c3c; /* Red error message color */
 		font-size: 0.75vw;
 		padding-left: 1vw;
 		padding-right: 1vw;
@@ -505,34 +546,43 @@
 		top: -80%;
 		right: 2.5%;
 		cursor: pointer;
+		color: #333; /* Dark gray cross icon color */
 	}
 
 	.listFilterContainer {
 		width: 800%;
 		min-height: 100%;
+	
+		
+		
 	}
 
 	.filterAgenda {
 		display: flex;
 		justify-content: left;
 		text-align: center;
+		background:linear-gradient(to right, #60A3D9, #f9f9f9),
+		linear-gradient(to left,  #f9f9f9, #60A3D9),
+		linear-gradient(to bottom,  #f9f9f9, #60A3D9),
+		linear-gradient(to top,  #f9f9f9, #60A3D9);
+	
 	}
 
 	.filterOption {
 		margin-top: 0.5vw;
 		margin-left: 1vw;
 		margin-right: 1vw;
-		color: #4c5152;
+		color: #e67e22; /* Orange filter option color */
 		text-decoration: underline;
 		cursor: pointer;
 	}
 
 	.selectedFilterOption {
-		color: black;
+		color: #333; /* Dark gray selected filter option color */
 		text-decoration: none;
 		cursor: default;
 	}
-
+	
 	@media screen and (max-width: 650px) {
 		button {
 			padding-top: 1vh;
