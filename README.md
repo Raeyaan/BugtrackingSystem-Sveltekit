@@ -1,5 +1,5 @@
 # Full-Stack Agenda Web Application using SvelteKit and MongoDB
-This is a full-stack web application that allows users to manage their to-do lists efficiently. The application is built using the SvelteKit framework on the front end and MongoDB on the back end to store and manage task data. The purpose of this project was to learn more about SvelteKit and to gain experience in building a full stack web application.
+This is a full-stack web application that allows users to manage their  tasks efficiently. The application is built using the SvelteKit framework on the front end and MongoDB on the back end to store and manage task data. The purpose of this project was to learn more about SvelteKit and to gain experience in building a full stack web application.
 
 # Features
 * User Authentication: Users can sign up and log in to access their personalized to-do lists securely. Also utilize JWT tokens and cookies for seamless authentication, and route protection.
